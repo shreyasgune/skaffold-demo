@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: skaffold-demo
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8085
+    name: http
+  - port: 443
+    protocol: TCP
+    targetPort: 8085
+    name: https
+  selector:
+    app: skaffold-demo

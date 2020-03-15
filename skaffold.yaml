@@ -1,0 +1,12 @@
+apiVersion: skaffold/v1alpha2
+kind: Config
+build:
+  artifacts:
+  - imageName: shreyasgune/skaffold-demo
+    workspace: .
+  local: {}
+
+deploy:
+  kubectl:
+    manifests:
+      - deployment/*.yaml
