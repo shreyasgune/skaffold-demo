@@ -16,14 +16,14 @@ func main() {
 			"message": fmt.Sprintf("Hello from %s, it's %s right now.", getIP(), dt.Format("01-02-2006 15:04:05 Monday")),
 		})
 	})
-	r.GET("/choco", func(c *gin.Context) {
+	r.GET("/test", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": fmt.Sprintf("chocolega?"),
+			"message": fmt.Sprintf("test endpoint is working"),
 		})
 	})
-	r.GET("/lega", func(c *gin.Context) {
+	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": fmt.Sprintf("lega kya choco?"),
+			"message": fmt.Sprintf("ping returns 200 response"),
 		})
 	})
 	r.Run(fmt.Sprintf("%s:8085",getIP()))
